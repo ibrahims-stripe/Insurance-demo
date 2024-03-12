@@ -1,42 +1,44 @@
 {
-    "id": "8c6b4d24-c73a-45f5-a680-aaba83bd4eb8",
+    "id": "bf7a70a6-1de7-420e-9301-c67001ff00a7",
     "type": "Automotive",
     "quote": [
         {
-            "amount": 7875,
-            "customer": "cus_PicaMs9LbgaxvT",
+            "amount": 86574,
+            "customer": "cus_Pj0fWpCGbXoi36",
             "mode": "payment",
-            "url": "https://checkout.stripe.com/c/pay/cs_test_a1SxNs61J3NpCMFWDuwgDyahnxJ0iIKaaSwTgxOFovEY5EUKxqFyoJyXwz#fidkdWxOYHwnPyd1blpxYHZxWjA0SndCX2pJNXdxZkpgQzNCPE9hZHJcbkhcYnJuN3dCU1JXM31BUUxSXD1hQGJmUU9%2FcVZWNlEwYUFBYXxIbHxsQWwxX28wSU1KbjRPYEFGbXQ8d2J1NURrNTVJdFdoYkh3bCcpJ2N3amhWYHdzYHcnP3F3cGApJ2lkfGpwcVF8dWAnPyd2bGtiaWBabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
+            "url": "payment",
             "includedFeatures": [
-                "Potenti felis, in cras at at ligula nunc.",
-                "Orci neque eget pellentesque."
+                "Liability Coverage",
+                "Collision Coverage",
+                "Medical Payments Coverage"
             ]
         },
         {
-            "amount": 656,
+            "amount": 7214,
             "mode": "subscription",
-            "customer": "cus_PicaMs9LbgaxvT",
-            "url": "https://checkout.stripe.com/c/pay/cs_test_a1nWsTV6i7Da9lnzQidZuJL7Wrtsq8jI1z5t4XshmNOL5iNAm72NGMcHS7#fid2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2R1bE5gfCc%2FJ3VuWnFgdnFaMDRKd0Jfakk1d3FmSmBDM0I8T2FkclxuSFxicm43d0JTUlczfUFRTFJcPWFAYmZRT39xVlY2UTBhQUFhfEhsfGxBbDFfbzBJTUpuNE9gQUZtdDx3YnU1RGs1NUl0V2hiSHdsJyknY3dqaFZgd3Ngdyc%2FcXdwYCknaWR8anBxUXx1YCc%2FJ3Zsa2JpYFpscWBoJyknYGtkZ2lgVWlkZmBtamlhYHd2Jz9xd3BgeCUl",
+            "customer": "cus_Pj0fWpCGbXoi36",
+            "url": "https://checkout.stripe.com/c/pay/cs_test_a1ieyUVKqSusFO6dQks6POEzhYMPRJVK0t4mIQV2sVE6rTHxZ3CDYZnCXr#fid2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2R1bE5gfCc%2FJ3VuWnFgdnFaMDRKaUBwRExUQX08aGthVGREQXxdR0BxQ0wyTTdra253RjZdPU18YVNTMTJgdXM9VFRcbmRLXXJOQjZtXGs3bmE2dm0zbz0zXU9xQkRSdFdRSkZgN2xsZ0I1NWAwf1R3MVxTJyknY3dqaFZgd3Ngdyc%2FcXdwYCknaWR8anBxUXx1YCc%2FJ3Zsa2JpYFpscWBoJyknYGtkZ2lgVWlkZmBtamlhYHd2Jz9xd3BgeCUl",
             "includedFeatures": [
-                "Potenti felis, in cras at at ligula nunc. ",
-                "Orci neque eget pellentesque.",
-                "Donec mauris sit in eu tincidunt etiam."
+                "Liability Coverage",
+                "Collision Coverage",
+                "Medical Payments Coverage",
+                "Cancel Anytime"
             ]
         }
     ],
     "customer": {
-        "id": "cus_PicaMs9LbgaxvT",
+        "id": "cus_Pj0fWpCGbXoi36",
         "object": "customer",
         "address": null,
         "balance": 0,
-        "created": 1710173064,
+        "created": 1710262662,
         "currency": null,
         "default_source": null,
         "delinquent": false,
         "description": "Customer Requesting Quote for Automotive insurance",
         "discount": null,
-        "email": "wall.rich@gmail.com",
-        "invoice_prefix": "3CFC1484",
+        "email": "i.sowunmi97@gmail.com",
+        "invoice_prefix": "830EC583",
         "invoice_settings": {
             "custom_fields": null,
             "default_payment_method": null,
@@ -48,7 +50,7 @@
             "country": "United Kingdom",
             "type": "Automotive"
         },
-        "name": "Richard Wall",
+        "name": "Ibrahim sowunmi",
         "phone": null,
         "preferred_locales": [],
         "shipping": null,

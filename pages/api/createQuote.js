@@ -22,7 +22,7 @@ export default async function handler(req, res) {
 
         console.log("Creating Quote");
         const id = uuidv4();
-        const quote = await createQuote(customer.id, type);
+        const quote = await createQuote(customer.id, type, name);
         const response = {
             id,
             type,
@@ -62,11 +62,10 @@ const createQuote = async (customerId, type, name) => {
     try {
         console.log("Creating Product");
         const product = await stripe.products.create({
-            name: `${type} Insurance for customer ${name}`,
+            name: `${type} Insurance for ${name}`,
         });
 
         console.log(`Product ${product.id} created`);
-
         console.log("Creating Price");
 
         const price = await stripe.prices.create({
@@ -78,7 +77,7 @@ const createQuote = async (customerId, type, name) => {
 
         console.log(`Price ${price.id} created`);
 
-        console.log("Creting Subscription Checkout Session");
+        console.log("Creating Subscription Checkout Session");
         const subsSession = await stripe.checkout.sessions.create({
             billing_address_collection: "auto",
             line_items: [
@@ -114,7 +113,7 @@ const createQuote = async (customerId, type, name) => {
                         unit_amount: amount,
                         product_data: {
                             name: `Annual ${type} insurance`,
-                            description: `Annual payment, ${type} Insurance for customer ${customerId}`,
+                            description: `Annual payment, ${type} Insurance for ${name}`,
                         },
                     },
                     quantity: 1,
@@ -132,10 +131,11 @@ const createQuote = async (customerId, type, name) => {
                 amount,
                 customer: customerId,
                 mode: "payment",
-                url: session.url,
+                url: "payment",
                 includedFeatures: [
-                    "Potenti felis, in cras at at ligula nunc.",
-                    "Orci neque eget pellentesque.",
+                    "Liability Coverage",
+                    "Collision Coverage",
+                    "Medical Payments Coverage",
                 ],
             },
             {
@@ -144,9 +144,10 @@ const createQuote = async (customerId, type, name) => {
                 customer: customerId,
                 url: subsSession.url,
                 includedFeatures: [
-                    "Potenti felis, in cras at at ligula nunc. ",
-                    "Orci neque eget pellentesque.",
-                    "Donec mauris sit in eu tincidunt etiam.",
+                    "Liability Coverage",
+                    "Collision Coverage",
+                    "Medical Payments Coverage",
+                    "Cancel Anytime",
                 ],
             },
         ];
