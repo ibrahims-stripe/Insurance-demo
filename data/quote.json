@@ -1,0 +1,58 @@
+{
+    "id": "8c6b4d24-c73a-45f5-a680-aaba83bd4eb8",
+    "type": "Automotive",
+    "quote": [
+        {
+            "amount": 7875,
+            "customer": "cus_PicaMs9LbgaxvT",
+            "mode": "payment",
+            "url": "https://checkout.stripe.com/c/pay/cs_test_a1SxNs61J3NpCMFWDuwgDyahnxJ0iIKaaSwTgxOFovEY5EUKxqFyoJyXwz#fidkdWxOYHwnPyd1blpxYHZxWjA0SndCX2pJNXdxZkpgQzNCPE9hZHJcbkhcYnJuN3dCU1JXM31BUUxSXD1hQGJmUU9%2FcVZWNlEwYUFBYXxIbHxsQWwxX28wSU1KbjRPYEFGbXQ8d2J1NURrNTVJdFdoYkh3bCcpJ2N3amhWYHdzYHcnP3F3cGApJ2lkfGpwcVF8dWAnPyd2bGtiaWBabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
+            "includedFeatures": [
+                "Potenti felis, in cras at at ligula nunc.",
+                "Orci neque eget pellentesque."
+            ]
+        },
+        {
+            "amount": 656,
+            "mode": "subscription",
+            "customer": "cus_PicaMs9LbgaxvT",
+            "url": "https://checkout.stripe.com/c/pay/cs_test_a1nWsTV6i7Da9lnzQidZuJL7Wrtsq8jI1z5t4XshmNOL5iNAm72NGMcHS7#fid2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2R1bE5gfCc%2FJ3VuWnFgdnFaMDRKd0Jfakk1d3FmSmBDM0I8T2FkclxuSFxicm43d0JTUlczfUFRTFJcPWFAYmZRT39xVlY2UTBhQUFhfEhsfGxBbDFfbzBJTUpuNE9gQUZtdDx3YnU1RGs1NUl0V2hiSHdsJyknY3dqaFZgd3Ngdyc%2FcXdwYCknaWR8anBxUXx1YCc%2FJ3Zsa2JpYFpscWBoJyknYGtkZ2lgVWlkZmBtamlhYHd2Jz9xd3BgeCUl",
+            "includedFeatures": [
+                "Potenti felis, in cras at at ligula nunc. ",
+                "Orci neque eget pellentesque.",
+                "Donec mauris sit in eu tincidunt etiam."
+            ]
+        }
+    ],
+    "customer": {
+        "id": "cus_PicaMs9LbgaxvT",
+        "object": "customer",
+        "address": null,
+        "balance": 0,
+        "created": 1710173064,
+        "currency": null,
+        "default_source": null,
+        "delinquent": false,
+        "description": "Customer Requesting Quote for Automotive insurance",
+        "discount": null,
+        "email": "wall.rich@gmail.com",
+        "invoice_prefix": "3CFC1484",
+        "invoice_settings": {
+            "custom_fields": null,
+            "default_payment_method": null,
+            "footer": null,
+            "rendering_options": null
+        },
+        "livemode": false,
+        "metadata": {
+            "country": "United Kingdom",
+            "type": "Automotive"
+        },
+        "name": "Richard Wall",
+        "phone": null,
+        "preferred_locales": [],
+        "shipping": null,
+        "tax_exempt": "none",
+        "test_clock": null
+    }
+}
