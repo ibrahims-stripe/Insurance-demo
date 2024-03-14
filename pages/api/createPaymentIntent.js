@@ -1,4 +1,5 @@
 // pages/api/payment-intent.js
+// Payment Intent for the PAYMENT ELEMENT 
 
 import Stripe from 'stripe';
 
@@ -16,13 +17,13 @@ export default async function handler(req, res) {
     try {
       const paymentIntent = await stripe.paymentIntents.create({
         amount: quote.amount,
-        currency: "eur",
+        currency: process.env.NEXT_PUBLIC_CURRENCY,
         customer: quote.customer,
         metadata: {
           "Customer Tenure": "15 Years",
           "Previous Claims": "3"
         },
-        automatic_payment_methods: { enabled: true },
+        payment_method_types: ['card', 'paypal', 'revolut_pay']
       });
 
       res.status(200).json({ clientSecret: paymentIntent.client_secret });

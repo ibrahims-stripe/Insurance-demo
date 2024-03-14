@@ -15,7 +15,7 @@ export default function plans({ data }) {
 export async function getServerSideProps() {
     // Fetch data from external API
     let data = require("../../data/quote.json");
-    console.log(data);
+    // console.log("THE DATA", data);
 
     // Pass data to the page via props
     return { props: { data } };
