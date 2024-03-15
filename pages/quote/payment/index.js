@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 import Router from "next/router";
 import Header from "../../../components/quote/Header";
+import quotes from "../../../data/quote.json"
 
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 
 import PaymentElementForm from "../../../components/PaymentElementForm";
+
+
 
 const stripePromise = loadStripe(`${process.env.NEXT_PUBLIC_STRIPEPK}`);
 
@@ -14,8 +17,9 @@ export default function Example() {
 
     const [clientSecret, setClientSecret] = useState("");
 
+
     useEffect(() => {
-        // Create PaymentIntent as soon as the page loads
+
         fetch("/api/createPaymentIntent", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -35,10 +39,20 @@ export default function Example() {
     return (
         <div className="bg-white">
             <Header />
-            <h1 className="text-5xl font-extrabold text-gray-900 sm:text-center py-12">
-                Fill in your payment details
-            </h1>
-            <div className="flex items-center justify-center border-2 p-36">
+            <div className="px-36">
+                <h1 className="text-5xl text-center font-extrabold text-gray-900 py-12 flex">
+                    Fill in your payment details
+                </h1>
+                <h1 className="text-5xl font-extrabold text-gray-900 sm:text-center pb-4 flex justify-between">
+                    <div className="text-left">
+                        Total:
+                    </div>
+                    <div>
+                        £{quotes.quote[0].amount / 100}
+                    </div>
+                </h1>
+            </div>
+            <div className="flex items-center justify-center border-2 py-12 p-36">
                 <div className="w-3/5">
                     {clientSecret && (
                         <Elements options={options} stripe={stripePromise} key={clientSecret}>
