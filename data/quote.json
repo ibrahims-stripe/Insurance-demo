@@ -1,10 +1,10 @@
 {
-    "id": "5f9c0b13-57a4-4db5-93d2-f0779574a447",
+    "id": "960deb6b-6e2c-4337-bb69-2beea4ce23b7",
     "type": "Automotive",
     "quote": [
         {
-            "amount": 132778,
-            "customer": "cus_PjglAxf3tZMbTD",
+            "amount": 80003,
+            "customer": "cus_Pk5lsWKZT5m2ud",
             "mode": "payment",
             "url": "payment",
             "includedFeatures": [
@@ -14,10 +14,10 @@
             ]
         },
         {
-            "amount": 11064,
+            "amount": 6666,
             "mode": "subscription",
-            "customer": "cus_PjglAxf3tZMbTD",
-            "url": "https://checkout.stripe.com/c/pay/cs_test_a1HM97kqKHZ4hoOdo7fSIXKWbZFGPZVVA0IavlmURn1WuiCkQYJQeKBNi0#fid2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2R1bE5gfCc%2FJ3VuWnFgdnFaMDRKaUBwRExUQX08aGthVGREQXxdR0BxQ0wyTTdra253RjZdPU18YVNTMTJgdXM9VFRcbmRLXXJOQjZtXGs3bmE2dm0zbz0zXU9xQkRSdFdRSkZgN2xsZ0I1NWAwf1R3MVxTJyknY3dqaFZgd3Ngdyc%2FcXdwYCknaWR8anBxUXx1YCc%2FJ3Zsa2JpYFpscWBoJyknYGtkZ2lgVWlkZmBtamlhYHd2Jz9xd3BgeCUl",
+            "customer": "cus_Pk5lsWKZT5m2ud",
+            "url": "https://checkout.stripe.com/c/pay/cs_test_a1z0VWgCvjMjoxNYoVvhcQCj23x1JM68iTZqoHHRPnNBTnUSnbetDhqb7R#fid2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2R1bE5gfCc%2FJ3VuWnFgdnFaMDRKd0Jfakk1d3FmSmBDM0I8T2FkclxuSFxicm43d0JTUlczfUFRTFJcPWFAYmZRT39xVlY2UTBhQUFhfEhsfGxBbDFfbzBJTUpuNE9gQUZtdDx3YnU1RGs1NUl0V2hiSHdsJyknY3dqaFZgd3Ngdyc%2FcXdwYCknaWR8anBxUXx1YCc%2FJ3Zsa2JpYFpscWBoJyknYGtkZ2lgVWlkZmBtamlhYHd2Jz9xd3BgeCUl",
             "includedFeatures": [
                 "Liability Coverage",
                 "Collision Coverage",
@@ -27,18 +27,18 @@
         }
     ],
     "customer": {
-        "id": "cus_PjglAxf3tZMbTD",
+        "id": "cus_Pk5lsWKZT5m2ud",
         "object": "customer",
         "address": null,
         "balance": 0,
-        "created": 1710419266,
+        "created": 1710512270,
         "currency": null,
         "default_source": null,
         "delinquent": false,
         "description": "Customer Requesting Quote for Automotive insurance",
         "discount": null,
-        "email": "j.murphy@example.com",
-        "invoice_prefix": "3619CC2D",
+        "email": "rwall@stripe.com",
+        "invoice_prefix": "A8B40FFA",
         "invoice_settings": {
             "custom_fields": null,
             "default_payment_method": null,
@@ -50,7 +50,7 @@
             "country": "United Kingdom",
             "type": "Automotive"
         },
-        "name": "IBrahim",
+        "name": "Richard Wall",
         "phone": null,
         "preferred_locales": [],
         "shipping": null,

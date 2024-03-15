@@ -80,16 +80,16 @@ export default function PaymentElementForm() {
   };
 
   const paymentElementOptions = {
-    layout: "tabs",
+    layout: "accordion",
   };
 
   return (
     <form id="payment-form" onSubmit={handleSubmit}>
 
       <PaymentElement id="payment-element" options={paymentElementOptions} />
-      <button class="bg-blue-600 hover:bg-blue-700 text-white w-2/5 font-medium mt-4 py-2 px-4 rounded-lg shadow-md transition duration-150 ease-in-out" disabled={isLoading || !stripe || !elements} id="submit">
+      <button class="bg-indigo-600 hover:bg-indigo-700 text-white w-2/5 font-medium mt-4 py-2 px-4 rounded-lg shadow-md transition duration-150 ease-in-out" disabled={isLoading || !stripe || !elements} id="submit">
         <span id="button-text">
-          {isLoading ? <div className="spinner" id="spinner"></div> : "Pay now"}
+          {isLoading ? <div className="spinner" id="spinner"></div> : "Buy Policy"}
         </span>
       </button>
       {/* Show any error or success messages */}
