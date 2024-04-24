@@ -6,6 +6,7 @@ import quotes from "../../../data/quote.json"
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 
+
 import PaymentElementForm from "../../../components/PaymentElementForm";
 
 
@@ -33,6 +34,17 @@ export default function Example() {
         clientSecret,
         appearance: {
             theme: 'flat',
+            
+            variables: {
+                colorPrimary: '#635BFF',
+                colorBackground: '#F6F9FC',
+                colorText: '#30313d',
+                colorDanger: '#df1b41',
+                fontFamily: 'Ideal Sans, system-ui, sans-serif',
+                spacingUnit: '4px',
+                borderRadius: '10px',
+                // See all possible variables below
+              }
         }
     }
 
@@ -40,20 +52,17 @@ export default function Example() {
         <div className="bg-white">
             <Header />
             <div className="px-36">
-                <h1 className="text-5xl text-center font-extrabold text-gray-900 py-12 flex">
-                    Fill in your payment details
+                <h1 className="text-3xl justify-center font-extrabold text-gray-600 py-6 flex">
+                Policy Total: £{quotes.quote[0].amount / 100}
                 </h1>
-                <h1 className="text-5xl font-extrabold text-gray-900 sm:text-center pb-4 flex justify-between">
+                <h1 className="text-3xl justify-center font-extrabold text-indigo-600 py-6 flex">
                     <div className="text-left">
-                        Total:
-                    </div>
-                    <div>
-                        £{quotes.quote[0].amount / 100}
+                    Please complete your payment details
                     </div>
                 </h1>
             </div>
-            <div className="flex items-center justify-center border-2 py-12 p-36">
-                <div className="w-3/5">
+            <div className="flex items-center justify-center w-50 border-2 py-6 p-40">
+                <div className="w-2/5">
                     {clientSecret && (
                         <Elements options={options} stripe={stripePromise} key={clientSecret}>
                             <PaymentElementForm />

@@ -89,6 +89,7 @@ const createQuote = async (customerId, type, name) => {
                 },
             ],
             mode: "subscription",
+            payment_method_types: ['card', 'bacs_debit'],
             customer: customerId,
             success_url: `http://localhost:3000/quote/success?session_id={CHECKOUT_SESSION_ID}`,
             cancel_url: `http://localhost:3000/quote/cancel`,

@@ -2,7 +2,8 @@ import React from "react";
 import {
   PaymentElement,
   useStripe,
-  useElements
+  useElements,
+  ExpressCheckoutElement
 } from "@stripe/react-stripe-js";
 
 
@@ -52,7 +53,7 @@ export default function PaymentElementForm() {
     if (!stripe || !elements) {
       // Stripe.js hasn't yet loaded.
       // Make sure to disable form submission until Stripe.js has loaded.
-      return;
+      return <></>;
     }
 
     setIsLoading(true);
@@ -80,12 +81,12 @@ export default function PaymentElementForm() {
   };
 
   const paymentElementOptions = {
-    layout: "accordion",
+    layout: "tabs",
   };
 
-  return (
+  return (<>
+    <ExpressCheckoutElement onConfirm={handleSubmit} />
     <form id="payment-form" onSubmit={handleSubmit}>
-
       <PaymentElement id="payment-element" options={paymentElementOptions} />
       <button class="bg-indigo-600 hover:bg-indigo-700 text-white w-2/5 font-medium mt-4 py-2 px-4 rounded-lg shadow-md transition duration-150 ease-in-out" disabled={isLoading || !stripe || !elements} id="submit">
         <span id="button-text">
@@ -95,5 +96,6 @@ export default function PaymentElementForm() {
       {/* Show any error or success messages */}
       {message && <div id="payment-message">{message}</div>}
     </form>
+    </>
   );
 }
