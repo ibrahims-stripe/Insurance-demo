@@ -24,7 +24,6 @@ export default function ClaimRequest() {
         } else {
             console.log("the stripe and elements are not loaded");
         }
-        console.log("WHY!!!!!!!");
         const carddetails = await stripe.createToken(
             elements.getElement(CardElement),
             { currency: process.env.NEXT_PUBLIC_CURRENCY }

@@ -90,7 +90,7 @@ export default function PaymentElementForm() {
       <PaymentElement id="payment-element" options={paymentElementOptions} />
       <button class="bg-indigo-600 hover:bg-indigo-700 text-white w-2/5 font-medium mt-4 py-2 px-4 rounded-lg shadow-md transition duration-150 ease-in-out" disabled={isLoading || !stripe || !elements} id="submit">
         <span id="button-text">
-          {isLoading ? <div className="spinner" id="spinner"></div> : "Buy Policy"}
+          {isLoading ? <div className="spinner" id="spinner">Loading</div> : "Buy Policy"}
         </span>
       </button>
       {/* Show any error or success messages */}

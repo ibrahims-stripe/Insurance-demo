@@ -20,12 +20,10 @@ export default async function handler(req, res) {
         currency: process.env.NEXT_PUBLIC_CURRENCY,
         customer: quote.customer,
         description: "Full Payment - Policy 12345",
-        payment_method_types: ['card', 'paypal', 'revolut_pay', 'pay_by_bank'],
         metadata: {
           "Customer_id": "abc_12345",
           "Policy Number": "12345"
         },
-        //payment_method_types: ['card', 'paypal', 'revolut_pay']
       });
 
       res.status(200).json({ clientSecret: paymentIntent.client_secret });

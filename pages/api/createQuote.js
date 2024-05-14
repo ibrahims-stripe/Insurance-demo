@@ -23,14 +23,12 @@ export default async function handler(req, res) {
         console.log("Creating Quote");
         const id = uuidv4();
         const quote = await createQuote(customer.id, type, name);
-        console.log("THE QUOTE", quote)
         const response = {
             id,
             type,
             quote,
             customer,
         };
-        console.log("CURRE", response)
 
         fs.writeFileSync(
             "./data/quote.json",
@@ -89,7 +87,6 @@ const createQuote = async (customerId, type, name) => {
                 },
             ],
             mode: "subscription",
-            payment_method_types: ['card', 'bacs_debit'],
             customer: customerId,
             success_url: `http://localhost:3000/quote/success?session_id={CHECKOUT_SESSION_ID}`,
             cancel_url: `http://localhost:3000/quote/cancel`,
@@ -123,7 +120,6 @@ const createQuote = async (customerId, type, name) => {
                 },
             ],
             mode: "payment",
-            payment_method_types: ['card', 'bacs_debit'],
             customer: customerId,
             success_url: `http://localhost:3000/quote/success?session_id={CHECKOUT_SESSION_ID}`,
             cancel_url: `http://localhost:3000/quote/cancel`,
